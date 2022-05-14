@@ -6,7 +6,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.apache.commons.io.FileUtils;
 import java.io.File;
@@ -23,8 +23,8 @@ public class pruebaCovid {
   
   @Before
   public void setUp() throws Exception {
-    WebDriverManager.firefoxdriver().setup();
-    driver = new FirefoxDriver();
+    WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     js = (JavascriptExecutor) driver;
