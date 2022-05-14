@@ -7,7 +7,7 @@ import org.junit.runners.MethodSorters;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -21,8 +21,8 @@ public class mernCrudTest {
 
 	  @Before
 	  public void setUp() throws Exception {
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		driver = new FirefoxDriver();
 	    baseUrl = "https://www.google.com/";
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    js = (JavascriptExecutor) driver;
