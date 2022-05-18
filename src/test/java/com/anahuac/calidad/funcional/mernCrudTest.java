@@ -8,6 +8,8 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -37,15 +39,15 @@ public class mernCrudTest {
 		    driver.findElement(By.name("name")).sendKeys("alan");
 		    driver.findElement(By.name("email")).click();
 		    driver.findElement(By.name("email")).clear();
-		    driver.findElement(By.name("email")).sendKeys("hola@gmail.com");
+		    driver.findElement(By.name("email")).sendKeys("hola@hmai.com");
 		    driver.findElement(By.name("age")).click();
 		    driver.findElement(By.name("age")).clear();
-		    driver.findElement(By.name("age")).sendKeys("23");
+		    driver.findElement(By.name("age")).sendKeys("12");
 		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[1]")).click();
 		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::div[2]")).click();
 		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
 	    
-		    pause(8000);
+		    pause(3000);
 		    
 		    WebElement etiquetaEsperada = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/div"));
 	    
@@ -59,15 +61,16 @@ public class mernCrudTest {
 	  @Test
 	  public void BModificar() throws Exception {
 		  
-		  driver.get("https://mern-crud.herokuapp.com/");
-		    pause(8000);
+		    driver.get("https://mern-crud.herokuapp.com/");
 		    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button")).click();
 		    driver.findElement(By.name("name")).click();
 		    driver.findElement(By.name("name")).clear();
-		    driver.findElement(By.name("name")).sendKeys("Rene");
+		    driver.findElement(By.name("name")).sendKeys("rene");
 		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
+		  
+		
 		    
-        pause(8000);
+        pause(3000);
 		    
 	    WebElement etiquetaEsperada = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/p"));
 	    
@@ -83,7 +86,7 @@ public class mernCrudTest {
 		  
 		  driver.get("https://mern-crud.herokuapp.com/");
 		  
-		  pause(8000);
+		  pause(3000);
 		    
 		  WebElement etiquetaEsperada = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/table/tbody/tr[1]/td[1]"));
 		    
@@ -102,11 +105,12 @@ public class mernCrudTest {
 		  
 		  driver.get("https://mern-crud.herokuapp.com/");
 		    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
+		    WebElement etiquetaEsperada = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]"));
+		    pause(3000);
+		    
 		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Rene'])[2]/following::button[1]")).click();
-		    
-		    pause(8000);
-		    
-		    WebElement etiquetaEsperada = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/table/tbody/tr[1]/td[1]"));
+
+		
 		    
 		    String text = etiquetaEsperada.getText();
 		    
