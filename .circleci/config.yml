@@ -17,7 +17,6 @@ jobs:
         docker pull mcr.microsoft.com/mssql/server:2019-latest
           name: Build
           command: mvn -B -DskipTests clean package
-          command: docker pull mcr.microsoft.com/mssql/server:2019-latest
       # Then run your tests!
       - run:
           name: Test
