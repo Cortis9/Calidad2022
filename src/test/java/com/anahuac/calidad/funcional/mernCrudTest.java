@@ -44,10 +44,10 @@ public class mernCrudTest {
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/button")).click();
     driver.findElement(By.name("name")).click();
     driver.findElement(By.name("name")).clear();
-    driver.findElement(By.name("name")).sendKeys("H");
+    driver.findElement(By.name("name")).sendKeys("alan");
     driver.findElement(By.name("email")).click();
     driver.findElement(By.name("email")).clear();
-    driver.findElement(By.name("email")).sendKeys("correo@a.com");
+    driver.findElement(By.name("email")).sendKeys("Hola@gmail.com");
     driver.findElement(By.name("age")).click();
     driver.findElement(By.name("age")).clear();
     driver.findElement(By.name("age")).sendKeys("44");
