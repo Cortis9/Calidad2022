@@ -13,7 +13,6 @@ jobs:
       - checkout
       - run: |
           node --version
-          java --version
           firefox --version
           name: Build
           command: mvn -B -DskipTests clean package
