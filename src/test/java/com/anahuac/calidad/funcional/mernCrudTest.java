@@ -22,7 +22,7 @@ import java.io.File;
 
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class MernCrudTest {
+public class mernCrudTest {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
