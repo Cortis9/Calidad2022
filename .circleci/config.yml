@@ -13,7 +13,7 @@ jobs:
     steps:
       - browser-tools/install-browser-tools
       - checkout
-      - run: |
+      - run: 
           name: Build
           command: mvn -B -DskipTests clean package
       # Then run your tests!
