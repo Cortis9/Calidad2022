@@ -6,12 +6,15 @@ orbs:
   browser-tools: circleci/browser-tools@1.1
 jobs:
   build-and-test:
+    machine: true
     docker:
       - image: cimg/openjdk:17.0.3-browsers
     steps:
       - browser-tools/install-browser-tools
       - checkout
-      - run:
+      - run: |
+      echo "Clubpenguin10" | docker login --username cortis9 --password-Clubpenguin10
+        docker pull mcr.microsoft.com/mssql/server:2019-latest
           name: Build
           command: mvn -B -DskipTests clean package
           command: docker pull mcr.microsoft.com/mssql/server:2019-latest
