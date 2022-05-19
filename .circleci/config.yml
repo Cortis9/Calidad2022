@@ -11,9 +11,7 @@ jobs:
     steps:
       - browser-tools/install-browser-tools
       - checkout
-      - run: |
-          node --version
-          firefox --version
+      - run:
           name: Build
           command: mvn -B -DskipTests clean package
       # Then run your tests!
