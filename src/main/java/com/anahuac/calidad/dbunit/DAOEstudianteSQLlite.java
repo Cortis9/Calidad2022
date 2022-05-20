@@ -3,6 +3,11 @@ package com.anahuac.calidad.dbunit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+package com.anahuac.calidad.dbunit;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,10 +17,10 @@ import com.anahuac.calidad.curdMOCK.IDAOEstudiante;
 
 public class DAOEstudianteSQLlite implements IDAOEstudiante {
 
-	private static final String DRIVER_NAME = "org.sqlite.JDBC";
-	private static final String DB_URL = "jdbc:sqlite:C:\\Users\\alnmi\\OneDrive\\Escritorio\\Clases\\Calidad\\Proyectos java\\Alumnos.db";
-	private static final String ID= "";
-	private static final String PASS= "";
+	private static final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
+	private static final String DB_URL = "jdbc:mysql://uvbxs3hqonyjbgc2:qpIaIYHl1tMzpKj4vCgT@b65bd9j6rlmpmzkfzgkx-mysql.services.clever-cloud.com:3306/b65bd9j6rlmpmzkfzgkx";
+	private static final String ID= "uvbxs3hqonyjbgc2";
+	private static final String PASS= "qpIaIYHl1tMzpKj4vCgT";
 	
 	private Connection getConnection() {
 		
@@ -205,5 +210,5 @@ public class DAOEstudianteSQLlite implements IDAOEstudiante {
 	}
 	
 
-
 }
+
