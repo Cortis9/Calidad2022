@@ -93,7 +93,7 @@ public class mernCrudTest {
 		  String text = etiquetaEsperada.getText();
 		    
 		    
-		  assertThat("Rene", is(text));
+		  assertThat("Alan", is(text));
 		  
 		  
 		  
