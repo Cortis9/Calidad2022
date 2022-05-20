@@ -16,13 +16,18 @@ import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.dbunit.operation.DatabaseOperation;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
 import static org.hamcrest.MatcherAssert.assertThat; 
 import static org.hamcrest.Matchers.*;
 
 import com.anahuac.calidad.curdMOCK.*;
 
 import junit.framework.TestCase;
+
+
 public class DaoEstudiantetestSqlLiteTest extends TestCase{
 	
 	IDatabaseConnection connection;
@@ -43,14 +48,14 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 		super.setUp();
 		Connection jdbcConnection;
 		
-		jdbcConnection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alnmi\\OneDrive\\Escritorio\\Clases\\Calidad\\Proyectos java\\Alumnos.db");
+		jdbcConnection = DriverManager.getConnection("jdbc:mysql://uvbxs3hqonyjbgc2:qpIaIYHl1tMzpKj4vCgT@b65bd9j6rlmpmzkfzgkx-mysql.services.clever-cloud.com:3306/b65bd9j6rlmpmzkfzgkx");
 		
 		connection = new DatabaseConnection(jdbcConnection);
 		
 		try {
 			
 			PreparedStatement preparedStatement;
-			preparedStatement = jdbcConnection.prepareStatement("Delete from sqlite_sequence WHERE name = ?");
+			preparedStatement = jdbcConnection.prepareStatement("Delete from Estudiante WHERE nombre = ?");
 			// Set the values to match in the ? on query
 			
 			
@@ -109,7 +114,7 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 			
 		} catch (Exception e) {
 			// TODO: handle exception
-			fail("Error in insert ttest: " + e.getMessage());
+			fail("Error in insert test: " + e.getMessage());
 		}
 	}
 	
