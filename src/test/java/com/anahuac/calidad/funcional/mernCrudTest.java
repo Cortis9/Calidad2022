@@ -62,18 +62,20 @@ public class mernCrudTest {
 	  public void BModificar() throws Exception {
 		  
 		    driver.get("https://mern-crud.herokuapp.com/");
+		    pause(5000);
 		    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button")).click();
+		    pause(5000);
 		    driver.findElement(By.name("name")).click();
-		    pause(8000);
+		    pause(5000);
 		    driver.findElement(By.name("name")).clear();
-		    pause(8000);
+		    pause(5000);
 		    driver.findElement(By.name("name")).sendKeys("rene");
-		    pause(8000);
+		    pause(5000);
 		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
 		  
 		   
 		    
-        pause(8000);
+        pause(5000);
 		    
 	    WebElement etiquetaEsperada = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/p"));
 	    
