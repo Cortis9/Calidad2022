@@ -64,8 +64,11 @@ public class mernCrudTest {
 		    driver.get("https://mern-crud.herokuapp.com/");
 		    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button")).click();
 		    driver.findElement(By.name("name")).click();
+		    pause(8000);
 		    driver.findElement(By.name("name")).clear();
+		    pause(8000);
 		    driver.findElement(By.name("name")).sendKeys("rene");
+		    pause(8000);
 		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
 		  
 		   
