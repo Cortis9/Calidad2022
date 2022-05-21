@@ -17,7 +17,7 @@ jobs:
           command: mvn -B -DskipTests clean package
       - run:
           name: Test
-          command: mvn test -Dtest="mernCrudTest" 
+          command: mvn test 
           
 
 # Invoke jobs via workflows
