@@ -70,7 +70,7 @@ public class CuentaTest {
 		
 	    aux.debit(c4.balance);
 
-		Mockito.verify(0);
+		
 		
 		
 	}
